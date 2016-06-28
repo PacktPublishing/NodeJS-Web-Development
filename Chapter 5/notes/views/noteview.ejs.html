@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<% include headerStuff %>
+</head>
+<body>
+<% include pageHeader %>
+<h3><%= note ? note.title : "" %></h3>
+<p><%= note ? note.body : "" %></p>
+<p>Key: <%= notekey %></p>
+<% if (notekey) { %>
+    <hr/>
+    <p><a href="/notes/destroy?key=<%= notekey %>">Delete</a>
+     | <a href="/notes/edit?key=<%= notekey %>">Edit</a></p>
+<% } %>
+<% include footer %>
+</body>
+</html>

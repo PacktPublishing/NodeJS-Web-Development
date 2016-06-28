@@ -1,0 +1,63 @@
+version: '2'
+
+services:  
+
+  db-auth-test:
+    build: ../db-auth
+    container_name: db-auth-test
+    networks:
+      - authnet-test
+
+  userauth-test:
+    build: ../users
+    container_name: userauth-test
+    environment:
+      DEBUG: ""
+      NODE_ENV: "test"
+      SEQUELIZE_CONNECT: "userauth-test/sequelize-docker-mysql.yaml"
+      HOST_USERS_TEST: "localhost"
+    networks:
+      - authnet-test
+      - notesauth-test
+    depends_on:
+      - db-auth-test
+    volumes:
+      - ./reports-userauth:/reports
+      - ./userauth:/usr/src/app/userauth-test
+
+  db-notes-test:
+    build: ../db-notes
+    container_name: db-notes-test
+    networks:
+      - frontnet-test
+
+  notesapp-test:
+    build: ../notes
+    container_name: notesapp-test
+    environment:
+      DEBUG: "notes:*,messages:*"
+      NODE_ENV: "test"
+      SEQUELIZE_CONNECT: "notesmodel-test/sequelize-docker-mysql.yaml"
+      USER_SERVICE_URL: "http://userauth-test:3333"
+    networks:
+      - frontnet-test
+      - notesauth-test
+    expose:
+      - 3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db-notes-test
+      - userauth-test
+    volumes:
+      - ./reports-notes:/reports
+      - ./notesui:/usr/src/app/notesui-test
+      - ./notesmodel:/usr/src/app/notesmodel-test
+
+networks:
+  authnet-test:
+    driver: bridge
+  frontnet-test:
+    driver: bridge
+  notesauth-test:
+    driver: bridge

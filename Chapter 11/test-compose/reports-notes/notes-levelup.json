@@ -1,0 +1,130 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 8,
+    "passes": 8,
+    "pending": 0,
+    "failures": 0,
+    "start": "2016-05-01T00:59:51.668Z",
+    "end": "2016-05-01T00:59:51.757Z",
+    "duration": 89
+  },
+  "tests": [
+    {
+      "title": "should have three entries",
+      "fullTitle": "Model Test check keylist should have three entries",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have keys n1 n2 n3",
+      "fullTitle": "Model Test check keylist should have keys n1 n2 n3",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have titles Node #",
+      "fullTitle": "Model Test check keylist should have titles Node #",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have proper note",
+      "fullTitle": "Model Test read note should have proper note",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Unknown note should fail",
+      "fullTitle": "Model Test read note Unknown note should fail",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "after a successful model.update",
+      "fullTitle": "Model Test change note after a successful model.update",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should remove note",
+      "fullTitle": "Model Test destroy note should remove note",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should fail to remove unknown note",
+      "fullTitle": "Model Test destroy note should fail to remove unknown note",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "should have three entries",
+      "fullTitle": "Model Test check keylist should have three entries",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have keys n1 n2 n3",
+      "fullTitle": "Model Test check keylist should have keys n1 n2 n3",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have titles Node #",
+      "fullTitle": "Model Test check keylist should have titles Node #",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have proper note",
+      "fullTitle": "Model Test read note should have proper note",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Unknown note should fail",
+      "fullTitle": "Model Test read note Unknown note should fail",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "after a successful model.update",
+      "fullTitle": "Model Test change note after a successful model.update",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should remove note",
+      "fullTitle": "Model Test destroy note should remove note",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should fail to remove unknown note",
+      "fullTitle": "Model Test destroy note should fail to remove unknown note",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
+}

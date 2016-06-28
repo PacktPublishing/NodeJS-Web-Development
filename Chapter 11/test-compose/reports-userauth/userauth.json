@@ -1,0 +1,74 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2016-05-01T01:01:35.021Z",
+    "end": "2016-05-01T01:01:35.363Z",
+    "duration": 342
+  },
+  "tests": [
+    {
+      "title": "list created users",
+      "fullTitle": "Users Test List user list created users",
+      "duration": 19,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "find created users",
+      "fullTitle": "Users Test find user find created users",
+      "duration": 14,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "fail to find non-existent users",
+      "fullTitle": "Users Test find user fail to find non-existent users",
+      "duration": 13,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "delete nonexistent users",
+      "fullTitle": "Users Test delete user delete nonexistent users",
+      "duration": 13,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "list created users",
+      "fullTitle": "Users Test List user list created users",
+      "duration": 19,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "find created users",
+      "fullTitle": "Users Test find user find created users",
+      "duration": 14,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "fail to find non-existent users",
+      "fullTitle": "Users Test find user fail to find non-existent users",
+      "duration": 13,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "delete nonexistent users",
+      "fullTitle": "Users Test delete user delete nonexistent users",
+      "duration": 13,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
+}

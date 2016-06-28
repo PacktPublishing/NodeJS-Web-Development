@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<% include headerStuff %>
+</head>
+<body>
+<div class="container-fluid">
+<% include pageHeader %>
+
+<div class="row"><div class="col-xs-12">
+
+<form method='POST' action='/users/login'>
+    
+<div class="form-group">
+   <label for="username">User name:</label>
+   <input class="form-control" type='text' id='username' name='username' value='' placeholder='User Name'/>
+</div>
+
+<div class="form-group">
+   <label for="password">Password:</label>
+   <input class="form-control" type='password' id='password' name='password' value='' placeholder='Password'/>
+</div>
+
+<button type="submit" class="btn btn-default">Submit</button>
+
+</form>
+
+</div></div>
+
+<% include footer %>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<% include headerStuff %>
+</head>
+<body>
+<div class="container-fluid">
+<% include pageHeader %>
+
+<div class="row"><div class="col-xs-12">
+<form method='POST' action='/notes/save'>
+<input type='hidden' name='docreate' value='<%= docreate ? "create" : "update"%>'>
+
+<div class="form-group">
+    <label for="notekey">Key</label>
+    <% if (docreate) { %>
+        <input class="form-control" type='text' id='notekey' name='notekey' value='' placeholder='key'/>
+    <% } else { %>
+        <%= note ? notekey : "" %>
+        <input  class="form-control" type='hidden' id='notekey' name='notekey' value='<%= note ? notekey : "" %>'/>
+    <% } %>
+</div>
+
+<div class="form-group">
+<label for="title">Title</label>
+<input type="text" class="form-control" id='title' name='title' placeholder="note title" value='<%= note ? note.title : "" %>'>
+</div>
+
+<div class="form-group">
+<textarea class="form-control" name='body' rows="5"><%= note ? note.body : "" %></textarea>
+</div>
+
+<button type="submit" class="btn btn-default">Submit</button>
+
+</form>
+</div></div>
+
+<% include footer %>
+</div>
+</body>
+</html>

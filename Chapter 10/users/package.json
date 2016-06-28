@@ -1,0 +1,24 @@
+{
+  "name": "user-auth-server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "user-server.js",
+  "scripts": {
+    "start": "DEBUG=users:* PORT=3333 SEQUELIZE_CONNECT=sequelize-mysql.yaml node user-server",
+    "on-server": "PORT=3333 SEQUELIZE_CONNECT=sequelize-server-mysql.yaml node ./user-server",
+    "docker": "node user-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=5.x"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "js-yaml": "^3.5.3",
+    "mysql": "^2.10.2",
+    "restify": "^4.0.4",
+    "sequelize": "^3.19.3",
+    "sqlite3": "3.x"
+  }
+}

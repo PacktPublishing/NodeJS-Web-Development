@@ -1,0 +1,54 @@
+{
+  "name": "notes",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "start-fs": "NOTES_MODEL=models/notes-fs node ./bin/www",
+    "server1-fs": "NOTES_MODEL=models/notes-fs PORT=3001 node ./bin/www",
+    "server2-fs": "NOTES_MODEL=models/notes-fs PORT=3002 node ./bin/www",
+    "start-levelup": "NOTES_MODEL=models/notes-levelup node ./bin/www",
+    "server1-levelup": "NOTES_MODEL=models/notes-levelup PORT=3001 node ./bin/www",
+    "server2-levelup": "NOTES_MODEL=models/notes-levelup PORT=3002 node ./bin/www",
+    "sqlite3-setup": "sqlite3 chap07.sqlite3 --init models/schema-sqlite3.sql ",
+    "start-sqlite3": "SQLITE_FILE=chap07.sqlite3 NOTES_MODEL=models/notes-sqlite3 node ./bin/www",
+    "server1-sqlite3": "SQLITE_FILE=chap07.sqlite3 NOTES_MODEL=models/notes-sqlite3 PORT=3001 node ./bin/www",
+    "server2-sqlite3": "SQLITE_FILE=chap07.sqlite3 NOTES_MODEL=models/notes-sqlite3 PORT=3002 node ./bin/www",
+    "start-sequelize": "SEQUELIZE_CONNECT=models/sequelize-sqlite.yaml NOTES_MODEL=models/notes-sequelize node ./bin/www",
+    "start-sequelize-mysql": "SEQUELIZE_CONNECT=models/sequelize-mysql.yaml NOTES_MODEL=models/notes-sequelize node ./bin/www",
+    "server1-sequelize": "SEQUELIZE_CONNECT=models/sequelize-sqlite.yaml NOTES_MODEL=models/notes-sequelize PORT=3001 node ./bin/www",
+    "server2-sequelize": "SEQUELIZE_CONNECT=models/sequelize-sqlite.yaml NOTES_MODEL=models/notes-sequelize PORT=3001 node ./bin/www",
+    "start-mongodb": "MONGO_URL=mongodb://localhost/chap07 NOTES_MODEL=models/notes-mongodb node ./bin/www",
+    "server1-mongodb": "MONGO_URL=mongodb://localhost/chap07 NOTES_MODEL=models/notes-mongodb PORT=3001 node ./bin/www",
+    "server2-mongodb": "MONGO_URL=mongodb://localhost/chap07 NOTES_MODEL=models/notes-mongodb PORT=3002 node ./bin/www",
+    "server1": "PORT=3001 node ./bin/www",
+    "server2": "PORT=3002 node ./bin/www",
+    "postinstall": "bower install",
+    "bootstrapsetup": "cd bower_components/bootstrap && npm install && npm install grunt-cli ",
+    "buildbootstrap": "cp variables.less bower_components/bootstrap/less && cd bower_components/bootstrap && grunt"
+  },
+  "engines": {
+    "node": ">=5.x"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "ejs": "~2.3.3",
+    "express": "~4.13.1",
+    "file-stream-rotator": "0.0.6",
+    "fs-extra": "^0.26.5",
+    "js-yaml": "^3.5.3",
+    "leveldown": "^1.4.4",
+    "levelup": "^1.3.1",
+    "mongodb": "^2.1.7",
+    "morgan": "~1.6.1",
+    "mysql": "^2.10.2",
+    "sequelize": "^3.19.2",
+    "serve-favicon": "~2.3.0",
+    "sqlite3": "3.1.x"
+  },
+  "devDependencies": {
+    "bower": "^1.7.7"
+  }
+}

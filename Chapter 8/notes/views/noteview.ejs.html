@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<% include headerStuff %>
+</head>
+<body>
+<div class="container-fluid">
+<% include pageHeader %>
+
+<div class="row"><div class="col-xs-12">
+<h3><%= note ? note.title : "" %></h3>
+<p><%= note ? note.body : "" %></p>
+<p>Key: <%= notekey %></p>
+</div></div>
+
+<% if (notekey && user) { %>
+    <div class="row">
+    <div class="btn-group col-sm-12">
+        <a class="btn btn-default" href="/notes/destroy?key=<%= notekey %>" role="button">Delete</a>
+        <a class="btn btn-default" href="/notes/edit?key=<%= notekey %>" role="button">Edit</a>
+    </div>
+    </div>
+<% } %>
+
+<% include footer %>
+</div>
+</body>
+</html>

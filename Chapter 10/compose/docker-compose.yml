@@ -1,0 +1,59 @@
+version: '2'
+services:  
+
+  db-auth:
+    build: ../db-auth
+    container_name: db-auth
+    networks:
+      - authnet
+    volumes:
+      - db-auth-data:/var/lib/mysql
+      # - ../db-auth/data:/var/lib/mysql
+
+  userauth:
+    build: ../users
+    container_name: userauth
+    networks:
+      - authnet
+      - notesauth
+    expose:
+      - 3333
+    depends_on:
+      - db-auth
+    restart: on-failure:10
+
+  db-notes:
+    build: ../db-notes
+    container_name: db-notes
+    networks:
+      - frontnet
+    volumes:
+      - db-notes-data:/var/lib/mysql
+      # - ../db-notes/data:/var/lib/mysql
+
+  notesapp:
+    build: ../notes
+    container_name: notesapp
+    networks:
+      - frontnet
+      - notesauth
+    expose:
+      - 3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db-notes
+      - userauth
+    restart: on-failure:10
+
+networks:
+  authnet:
+    driver: bridge
+  frontnet:
+    driver: bridge
+  notesauth:
+    driver: bridge
+
+volumes:
+  db-auth-data:
+  db-notes-data:

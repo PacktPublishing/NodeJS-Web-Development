@@ -1,0 +1,29 @@
+<header class="page-header">
+<h1><%= title %></h1>
+
+<% if (user && typeof hideAddNote === 'undefined') { %>
+<a class="btn btn-primary" href='/notes/add'>ADD Note</a>
+<% } %>
+
+<% if (user) { %>
+<a class="btn btn-primary" href="/users/logout">Log Out <span class="badge"><%= user.username %></span></a>
+<% } else { %>
+<a class="btn btn-primary" href="/users/login">Log in</a>
+<a class="btn btn-primary" href="/users/auth/twitter"><img width="15px" src="/images/twitter-brand-logos/TwitterLogo_white.png"/>Log in with Twitter</a>
+<% } %>
+
+<% if (typeof breadcrumbs !== 'undefined' && breadcrumbs) { %>
+<ol class="breadcrumb">
+    <%
+    for (var crumb of breadcrumbs) {
+        if (crumb.active) {
+        %><li class="active"><%= crumb.text %></li><%
+        } else {
+        %><li><a href="<%= crumb.href %>"><%= crumb.text %></a></li><%
+        }
+    }
+    %>
+</ol>
+<% } %>
+
+</header>
