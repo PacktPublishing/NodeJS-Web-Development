@@ -8,6 +8,6 @@ Developers experienced with JavaScript in the browser may find it fun to bring t
 We assume that you already know how to write software and have an understanding of modern programming languages such as JavaScript.
 
 For more information, you can refer to the following books:
-*[Node Web Development](https://www.packtpub.com/web-development/node-web-development?utm_source=GitHub&utm_medium=repo&utm_campaign=9781849515146)
-*[Node Web Development-Second Edition](https://www.packtpub.com/web-development/node-web-development-second-edition?utm_source=GitHub&utm_medium=repo&utm_campaign=9781782163305)
-*[Mastering Node.js](https://www.packtpub.com/web-development/mastering-nodejs?utm_source=GitHub&utm_medium=repo&utm_campaign=9781782166320)
+(*)[Node Web Development](https://www.packtpub.com/web-development/node-web-development?utm_source=GitHub&utm_medium=repo&utm_campaign=9781849515146)
+(*)[Node Web Development-Second Edition](https://www.packtpub.com/web-development/node-web-development-second-edition?utm_source=GitHub&utm_medium=repo&utm_campaign=9781782163305)
+(*)[Mastering Node.js](https://www.packtpub.com/web-development/mastering-nodejs?utm_source=GitHub&utm_medium=repo&utm_campaign=9781782166320)
