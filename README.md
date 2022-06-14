@@ -1,7 +1,3 @@
-## [Get this title for $10 on Packt's Spring Sale](https://www.packt.com/B05267?utm_source=github&utm_medium=packt-github-repo&utm_campaign=spring_10_dollar_2022)
------
-For a limited period, all eBooks and Videos are only $10. All the practical content you need \- by developers, for developers
-
 # NodeJS-Web-Development
 Code files for [NodeJS Web Development-Third Edition](https://www.packtpub.com/web-development/nodejs-web-development-third-edition?utm_source=GitHub&utm_medium=repo&utm_campaign=9781785881503) by [Packt Publishing](https://www.packtpub.com/)
 
