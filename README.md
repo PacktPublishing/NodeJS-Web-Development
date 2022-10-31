@@ -11,7 +11,3 @@ For more information, you can refer to the following books:
 * [Node Web Development](https://www.packtpub.com/web-development/node-web-development?utm_source=GitHub&utm_medium=repo&utm_campaign=9781849515146)
 * [Node Web Development-Second Edition](https://www.packtpub.com/web-development/node-web-development-second-edition?utm_source=GitHub&utm_medium=repo&utm_campaign=9781782163305)
 * [Mastering Node.js](https://www.packtpub.com/web-development/mastering-nodejs?utm_source=GitHub&utm_medium=repo&utm_campaign=9781782166320)
-### Download a free PDF
-
- <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
-<p align="center"> <a href="https://packt.link/free-ebook/9781785881503">https://packt.link/free-ebook/9781785881503 </a> </p>
